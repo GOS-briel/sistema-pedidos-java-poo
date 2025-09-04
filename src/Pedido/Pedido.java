@@ -23,14 +23,15 @@ private Status_Pedido status;
     }
 
 
-    public Pedido() {
-        this.setStatus(Status_Pedido.AGUARDANDO_PAGAMENTO);
-        produto.setStatus(Status_Pedido.ABERTO);
+  
 
-    }
+    
 
-    public Produto adicionar() {
-    return
+    public void adicionar(Produto produto) {
+     pedido.setStatus(Status_Pedido.Aberto);
+     produtos.add(produto);
+    System.out.println("Produto adicionado com sucesso");
+    
 
     }
 
