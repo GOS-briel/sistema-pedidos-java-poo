@@ -28,7 +28,7 @@ private Status_Pedido status;
     
 
     public void adicionar(Produto produto) {
-     pedido.setStatus(Status_Pedido.Aberto);
+     pedidos.setStatus(Status_Pedido.Aberto);
      produtos.add(produto);
     System.out.println("Produto adicionado com sucesso");
     
