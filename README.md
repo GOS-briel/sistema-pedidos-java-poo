@@ -1,12 +1,33 @@
-Estrutura Projeto
+# Sistema de Pedidos em Java (POO)
 
- 1- Criação das Classes principais Pedido, Produto e Cliente , todas essas com um gerenciador a parte para cada, nomeado de controle onde são aplicados os metodos que cada uma deve realizar 
+Sistema de cadastro de clientes, produtos e pedidos feito em Java puro, para praticar os pilares da orientação a objetos.
 
-2- Criação de Interfaces, conceito uma interface para ter o método de envio de notificaçãoes(Controle E-mail) , Metodos de Listagem , Atualização e Cadastramento, ficando todos como Default(Controle), E uma para Listar e percorrer o Clientes por id (Clientes Controle)
+> Projeto desenvolvido no curso **Back End Java da Ada Tech em parceria com o Mercado Livre**, módulo de Programação Orientada a Objetos II.
 
-3- Criação de Enums ,Pacote Status, Um responsável pelo Status de Entrega e o outro de Pagamento 
-Criação da Classe Service, Para instanciar e Implementar os métodos criados na Interface Controle Cliente e Controle Email
+## O que o sistema faz
 
-4-Main : Aplicação do GRUD da Classe Cliente
+- **CRUD de clientes:** cadastrar, listar, atualizar e buscar por id
+- **Produtos e pedidos:** cada pedido guarda seus itens, com quantidade e preço
+- **Status com enums:** um para o status do pedido (entrega) e outro para o pagamento
+- **Notificação por e-mail:** contrato definido em interface, para avisar o cliente das mudanças no pedido
 
-OBS: Branchs principais e Utilizadas Developer e Main 
+## Como está organizado
+
+| Pacote | Responsabilidade |
+|---|---|
+| `Cliente`, `Produto`, `Pedido` | Classes de domínio, cada uma com seu próprio controle |
+| `Controle` | Interfaces com os contratos de cadastro, listagem, atualização e notificação |
+| `Servico` | Implementação das interfaces de cliente e e-mail |
+| `Status` | Enums de status do pedido e do pagamento |
+| `Main.java` | Ponto de entrada, que executa o CRUD de clientes |
+
+## Conceitos praticados
+
+- Encapsulamento e separação de responsabilidades (domínio × controle × serviço)
+- Interfaces com métodos `default` para reaproveitar comportamento
+- Enums para representar estados de forma segura
+- Fluxo de trabalho com branches (`Developer` → `main`) e pull request
+
+## Como executar
+
+Abra o projeto no IntelliJ IDEA (ou outra IDE Java) e execute `src/Main.java`. Não há dependências externas.
